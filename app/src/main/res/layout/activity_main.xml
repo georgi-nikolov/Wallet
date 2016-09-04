@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.xcomputers.wallet.MainActivity">
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:background="@drawable/border">
+       <TextView
+           android:layout_width="0dp"
+           android:layout_weight="1"
+           android:text="Usage History"
+           android:textColor="@color/MyBrown"
+           android:textSize="20dp"
+           android:textStyle="bold"
+           android:layout_marginLeft="5dp"
+           android:layout_height="match_parent" />
+
+       <Button
+           android:layout_width="0dp"
+           android:layout_weight="0.7"
+           android:backgroundTint="@color/MyBrown"
+           android:textColor="#FFFFFF"
+           android:id="@+id/addButton"
+           android:text="Add"
+           android:layout_marginRight="10dp"
+           android:layout_height="match_parent" />
+       <Button
+           android:layout_width="0dp"
+           android:layout_weight="0.7"
+           android:backgroundTint="@color/MyBrown"
+           android:id="@+id/clearAll"
+           android:textColor="#FFFFFF"
+           android:textAllCaps="false"
+           android:textSize="13dp"
+           android:text="Clear data"
+           android:layout_height="match_parent" />
+
+   </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/scrollView1"
+        android:background="@drawable/border"
+        android:layout_weight="5">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/myLayout"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/border"
+        android:backgroundTint="#D3D3D3"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+                android:text="Total income today"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:id="@+id/incomeTodayTV"
+                android:text="0"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+                android:gravity="left"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="0dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textColor="#000000"
+                android:text="Total expense today"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="0"
+                android:layout_height="match_parent"
+                android:id="@+id/expenseTodayTV"
+                android:textColor="#000000"
+                android:gravity="left"/>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:background="@drawable/border"
+        android:backgroundTint="#D3D3D3"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textColor="#000000"
+            android:layout_height="match_parent"
+            android:text="Funds in Wallet:"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="0"
+            android:id="@+id/fundsInWalletTV"
+            android:textColor="#000000"
+            android:layout_gravity="left"/>
+
+
+    </LinearLayout>
+</LinearLayout>
