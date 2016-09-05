@@ -73,8 +73,21 @@ public class ExpenseFragment extends Fragment {
     }
 
     @Override
+    public void onSaveInstanceState(Bundle outState) {
+        outState.putString("amount", amount.getText().toString());
+        outState.putString("description", description.getText().toString());
+        super.onSaveInstanceState(outState);
+    }
+
+    @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+        if(savedInstanceState != null){
+            amount.setText(savedInstanceState.get("amount").toString());
+            description.setText(savedInstanceState.getString("description"));
+        }
+
         Bundle args = getArguments();
         String amountString = args.getString("amount");
         String descriptionString = args.getString("description");
